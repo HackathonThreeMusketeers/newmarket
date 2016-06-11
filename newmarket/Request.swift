@@ -59,9 +59,9 @@ class Request: NSObject {
     
     func postOrderList(sendDict:NSDictionary,callBackClosure:()->Void)->Void{
         
-        Alamofire.request(.POST, baseURL + "parent/" + NSUUID().UUIDString + "/test", parameters: sendDict as! [String : AnyObject] ,encoding: .JSON)
+        Alamofire.request(.POST, baseURL + "parent/" + NSUUID().UUIDString + "/list", parameters: sendDict as! [String : AnyObject])
             .responseJSON { response in
-                //print(sendDict as! [String : AnyObject])
+                print(sendDict as! [String : AnyObject])
                 print(response)
                 callBackClosure()
         }
