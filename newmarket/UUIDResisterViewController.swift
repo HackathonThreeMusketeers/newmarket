@@ -87,13 +87,13 @@ class UUIDResisterViewController: UIViewController, UITableViewDelegate, UITable
         
         if (name == nil) {
             name = "no name";
-        }
+        }else{
         
         myNames.addObject(name!)
         myPeripheral.addObject(peripheral)
         myUuids.addObject(peripheral.identifier.UUIDString)
         myTableView.reloadData()
-        
+        }
     }
     
     /*

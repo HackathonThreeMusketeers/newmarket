@@ -8,8 +8,14 @@
 
 import UIKit
 
-class OrderConfirmViewController: UIViewController {
+class OrderConfirmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
+    let request = Request()
+    
+    var items_id: NSMutableArray = NSMutableArray()
+    var items_name: NSMutableArray = NSMutableArray()
+    var items_count: NSMutableArray = NSMutableArray()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +25,22 @@ class OrderConfirmViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    
+    @IBAction func sendButtonAction(sender: AnyObject) {
+        request.postOrderList(sendCompleted)
+    }
+    
+    func sendCompleted() {
+        self.performSegueWithIdentifier("State", sender: "")
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let viewController = segue.destinationViewController as! OrderConfirmViewController
+        
+        
     }
     
 
