@@ -12,10 +12,11 @@ import Alamofire
 class Request: NSObject {
     
     let baseURL = "https://funhacks.herokuapp.com/"
+    let baseUUID = "F0B95469-1541-4C6C-8D59-0259E646FBF4"
     
     func getNowShopping(callBackClosure:()->Void)->Void{
         
-        Alamofire.request(.GET, baseURL + "parent/" + NSUUID().UUIDString + "/child")
+        Alamofire.request(.GET, baseURL + "parent/" + baseUUID + "/child")
             .responseJSON { response in
                 
                 if(response.result.value!["status"] as! String != "failed"){
@@ -25,7 +26,7 @@ class Request: NSObject {
     }
     
     func postUUID(childUUID: String, callBackClosure:()->Void)->Void{
-        Alamofire.request(.GET, baseURL + "parent/" + NSUUID().UUIDString + "/" + childUUID + "/regist")
+        Alamofire.request(.GET, baseURL + "parent/" + baseUUID + "/" + childUUID + "/regist")
             .validate()
             .responseJSON { response in
                 
@@ -59,7 +60,7 @@ class Request: NSObject {
     
     func postOrderList(sendDict:NSDictionary,callBackClosure:()->Void)->Void{
         
-        Alamofire.request(.POST, baseURL + "parent/" + NSUUID().UUIDString + "/list", parameters: sendDict as! [String : AnyObject])
+        Alamofire.request(.POST, baseURL + "parent/" + baseUUID + "/list", parameters: sendDict as! [String : AnyObject])
             .responseJSON { response in
                 print(sendDict as! [String : AnyObject])
                 print(response)
@@ -69,7 +70,7 @@ class Request: NSObject {
     
     func getChildState(callBackClosure:(date:NSMutableArray,name:NSMutableArray)->Void){
         
-        Alamofire.request(.GET, baseURL + "parent/" + NSUUID().UUIDString + "/child")
+        Alamofire.request(.GET, baseURL + "parent/" + baseUUID + "/child")
             .responseJSON { response in
                 print(response)
                 guard let object = response.result.value else {
