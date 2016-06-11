@@ -10,9 +10,15 @@ import UIKit
 
 class ChildStateViewController: UIViewController {
 
+    @IBOutlet weak var childStateTableView: UITableView!
+    let request = Request()
+    var timer: NSTimer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       timer =  NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: #selector(self.update(_:)), userInfo: nil, repeats: true)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +27,21 @@ class ChildStateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(animated: Bool) {
+         timer.invalidate()
+    }
+    
+    @objc func update(timer: NSTimer) {
+    request.getChildState(setStates)
+    }
+    
+    func setStates(date:NSMutableArray,name:NSMutableArray){
+        
+        
+        childStateTableView.reloadData()
+    }
+    
+    //func
 
     /*
     // MARK: - Navigation

@@ -23,6 +23,7 @@
 		0DEE05D21D0C79CC00A646B1 /* minas.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DEE05D01D0C79CC00A646B1 /* minas.png */; };
 		0DEE05D51D0C7A8600A646B1 /* miruki-sleep.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DEE05D31D0C7A8600A646B1 /* miruki-sleep.png */; };
 		0DEE05D61D0C7A8600A646B1 /* miruki.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DEE05D41D0C7A8600A646B1 /* miruki.png */; };
+		0DEE05D81D0C90FD00A646B1 /* SelectedOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEE05D71D0C90FD00A646B1 /* SelectedOrderTableViewCell.swift */; };
 		2C4E2DE71D0BA2ED009F069D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E2DE61D0BA2ED009F069D /* AppDelegate.swift */; };
 		2C4E2DE91D0BA2ED009F069D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E2DE81D0BA2ED009F069D /* MainViewController.swift */; };
 		2C4E2DEC1D0BA2ED009F069D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E2DEA1D0BA2ED009F069D /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		0DEE05D01D0C79CC00A646B1 /* minas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minas.png; sourceTree = "<group>"; };
 		0DEE05D31D0C7A8600A646B1 /* miruki-sleep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "miruki-sleep.png"; sourceTree = "<group>"; };
 		0DEE05D41D0C7A8600A646B1 /* miruki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = miruki.png; sourceTree = "<group>"; };
+		0DEE05D71D0C90FD00A646B1 /* SelectedOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedOrderTableViewCell.swift; sourceTree = "<group>"; };
 		2C4E2DE31D0BA2ED009F069D /* newmarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newmarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4E2DE61D0BA2ED009F069D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4E2DE81D0BA2ED009F069D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				0DEE05B91D0C251D00A646B1 /* Request.swift */,
 				0DEE05BD1D0C6EEA00A646B1 /* SelectOrderCellData.swift */,
 				0DEE05BF1D0C6F7200A646B1 /* SelectOrderTableViewCell.swift */,
+				0DEE05D71D0C90FD00A646B1 /* SelectedOrderTableViewCell.swift */,
 			);
 			path = newmarket;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				0D48ADC01D0C1DF200634955 /* OrderConfirmViewController.swift in Sources */,
 				0DEE05BA1D0C251D00A646B1 /* Request.swift in Sources */,
 				0DEE05C01D0C6F7200A646B1 /* SelectOrderTableViewCell.swift in Sources */,
+				0DEE05D81D0C90FD00A646B1 /* SelectedOrderTableViewCell.swift in Sources */,
 				0D48ADBE1D0C1DAF00634955 /* OrderListViewController.swift in Sources */,
 				2C4E2DE91D0BA2ED009F069D /* MainViewController.swift in Sources */,
 				0D48ADC21D0C1E2800634955 /* ChildStateViewController.swift in Sources */,

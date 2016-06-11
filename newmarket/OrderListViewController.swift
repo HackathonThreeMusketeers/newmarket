@@ -107,11 +107,27 @@ class OrderListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(sender?.dynamicType != UIButton.self){
         let viewController = segue.destinationViewController as! OrderConfirmViewController
-        viewController.items_id = self.items_id
-        viewController.items_name = self.items_name
-        viewController.items_count = self.items_count
         
+        var sendItemID = NSMutableArray()
+        var sendItemName = NSMutableArray()
+        var sendItemCount = NSMutableArray()
+        
+        for i in 0 ..< self.items_id.count {
+            
+            if(self.items_count[i] as! String != "0"){
+                sendItemID.addObject(self.items_id[i])
+                sendItemName.addObject(self.items_name[i])
+                sendItemCount .addObject(self.items_count[i])
+            }
+            
+        }
+        
+        viewController.items_id = sendItemID
+        viewController.items_name = sendItemName
+        viewController.items_count = sendItemCount
+        }
     }
     
     /*
