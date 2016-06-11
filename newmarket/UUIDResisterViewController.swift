@@ -108,7 +108,7 @@ class UUIDResisterViewController: UIViewController, UITableViewDelegate, UITable
         print("Name: \(myNames[indexPath.row])")
         
         //Todo UUIDを投げる
-        request.postUUID(myUuids[indexPath.row] as! String, callBackClosure: completeUUIDResister)
+        request.postUUID(myNames[indexPath.row] as! String, callBackClosure: completeUUIDResister)
         
     }
     
