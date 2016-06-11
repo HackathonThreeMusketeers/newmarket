@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="newmarket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="newmarket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="564.5" y="490.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Resister View Controller-->
         <scene sceneID="1sd-lc-tVz">
             <objects>
-                <viewController id="i9K-ut-7xY" sceneMemberID="viewController">
+                <viewController id="i9K-ut-7xY" customClass="UUIDResisterViewController" customModule="newmarket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XfZ-Yh-bS3"/>
                         <viewControllerLayoutGuide type="bottom" id="4vm-Y2-bkp"/>
@@ -66,14 +66,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Found devices" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="flT-Ob-47F">
-                                <rect key="frame" x="20" y="85" width="115" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0ij-Ib-Moz">
-                                <rect key="frame" x="0.0" y="123" width="375" height="544"/>
-                            </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="npI-l2-04P">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
@@ -91,18 +83,32 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="検出したデバイス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUu-Am-F4y">
+                                <rect key="frame" x="20" y="94" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A2h-nE-Qqa">
+                                <rect key="frame" x="0.0" y="123" width="375" height="544"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myTableView" destination="A2h-nE-Qqa" id="ynW-vk-LrH"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="BackMain" id="jyB-1g-aj5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubm-1F-d07" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="564.5" y="1416.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Shopping View Controller-->
         <scene sceneID="w8c-OU-YpT">
             <objects>
-                <viewController id="Lwt-wp-nls" sceneMemberID="viewController">
+                <viewController id="Lwt-wp-nls" customClass="SelectShoppingViewController" customModule="newmarket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PdJ-HI-f5c"/>
                         <viewControllerLayoutGuide type="bottom" id="LmQ-kM-sdh"/>
@@ -161,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="1102.5" y="471.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Order Confirm View Controller-->
         <scene sceneID="YQw-o3-CrR">
             <objects>
-                <viewController id="3Rv-OX-U2Q" sceneMemberID="viewController">
+                <viewController id="3Rv-OX-U2Q" customClass="OrderConfirmViewController" customModule="newmarket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0tI-Zb-k9T"/>
                         <viewControllerLayoutGuide type="bottom" id="FKd-fF-Wsq"/>
@@ -200,12 +206,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZI-oR-KI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1681.5" y="471.5"/>
+            <point key="canvasLocation" x="1645.5" y="490.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Child State View Controller-->
         <scene sceneID="ErC-jK-oXD">
             <objects>
-                <viewController id="4Lo-bM-NMU" sceneMemberID="viewController">
+                <viewController id="4Lo-bM-NMU" customClass="ChildStateViewController" customModule="newmarket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EG3-lf-5Ba"/>
                         <viewControllerLayoutGuide type="bottom" id="h9A-ky-U8l"/>
@@ -242,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="2132.5" y="490.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Order List View Controller-->
         <scene sceneID="27W-O4-22R">
             <objects>
-                <viewController id="rD9-lP-aMh" sceneMemberID="viewController">
+                <viewController id="rD9-lP-aMh" customClass="OrderListViewController" customModule="newmarket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rh7-Ha-FmI"/>
                         <viewControllerLayoutGuide type="bottom" id="dFs-ve-eOi"/>
@@ -293,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K60-Nj-6O1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097.5" y="1352.5"/>
+            <point key="canvasLocation" x="1050.5" y="1367.5"/>
         </scene>
     </scenes>
     <resources>
@@ -307,7 +313,7 @@
         <image name="shopping_go.png" width="96" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ayr-S3-RDj"/>
-        <segue reference="nNw-YO-bkf"/>
+        <segue reference="LfB-bh-13u"/>
+        <segue reference="jyB-1g-aj5"/>
     </inferredMetricsTieBreakers>
 </document>

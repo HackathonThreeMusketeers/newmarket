@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B2B77BD57F4C80F383A29183E24EAB6B6693630C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B2B77BD57F4C80F383A29183E24EAB6B6693630C" : 0,
+    "D478212A125340D7FB8E8AF4C1973CAD25D64CE3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "53CF8ECD-82A6-438A-ADF8-ACCB7B12015D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B2B77BD57F4C80F383A29183E24EAB6B6693630C" : "newmarket\/",
+    "D478212A125340D7FB8E8AF4C1973CAD25D64CE3" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "newmarket",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "newmarket.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:HackathonThreeMusketeers\/newmarket.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B2B77BD57F4C80F383A29183E24EAB6B6693630C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tsukalab\/SpringVacationPresentation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D478212A125340D7FB8E8AF4C1973CAD25D64CE3"
+    }
+  ]
+}
