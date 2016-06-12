@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChildStateViewController: UIViewController {
+class ChildStateViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var childStateTableView: UITableView!
     let request = Request()
@@ -19,6 +19,13 @@ class ChildStateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // DataSourceの設定.
+        childStateTableView.dataSource = self
+        
+        // Delegateを設定.
+        childStateTableView.delegate = self
+
 
        timer =  NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: #selector(self.update(_:)), userInfo: nil, repeats: true)
         
@@ -39,24 +46,28 @@ class ChildStateViewController: UIViewController {
     }
     
     func setStates(date:NSMutableArray,name:NSMutableArray){
-        
-        //print("data:\(data),name:\(name)")
+        print("setstate!hoge!")
+        self.items_name = name
+        self.items_date = date
         childStateTableView.reloadData()
     }
     
     
     //Table Viewのセルの数を指定
     func tableView(table: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items_id.count
+        return items_name.count
     }
     
     //各セルの要素を設定する
     func tableView(table: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // tableCell の ID で UITableViewCell のインスタンスを生成
-        let cell:SelectedChildTableViewCell = table.dequeueReusableCellWithIdentifier("SelectedTableCell", forIndexPath: indexPath) as! SelectedChildTableViewCell
+        let cell:SelectedChildTableViewCell = table.dequeueReusableCellWithIdentifier("StateTableCell", forIndexPath: indexPath) as! SelectedChildTableViewCell
         
-        let selectChildCellData = SelectChildCellData(item_name: items_name[indexPath.row] as! String, item_date: items_date[indexPath.row] as! String)
+        let selectChildCellData = SelectChildCellData(
+            item_name: items_name[indexPath.row] as! String,
+            item_date: items_date[indexPath.row] as! String
+        )
         
         cell.setCell(selectChildCellData)
         

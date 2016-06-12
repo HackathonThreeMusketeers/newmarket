@@ -70,6 +70,7 @@ class Request: NSObject {
     
     func getChildState(callBackClosure:(date:NSMutableArray,name:NSMutableArray)->Void){
         
+        print("hogehoge!");
         Alamofire.request(.GET, baseURL + "parent/" + baseUUID + "/child")
             .responseJSON { response in
                 print(response)
@@ -81,8 +82,10 @@ class Request: NSObject {
                 var name = NSMutableArray()
                 json["data"].forEach{ (_, json) in
                     date.addObject(json["date"].stringValue)
-                    name.addObject(json["name"].stringValue)
+                    name.addObject(json["name"].stringValue + "に到着しました。")
+                    
                     print("name:\(json["name"].stringValue)")
+                    print("name:\(json["date"].stringValue)")
                 }
                 callBackClosure(date: date,name: name)
         }

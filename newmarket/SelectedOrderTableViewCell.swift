@@ -16,9 +16,8 @@ class SelectedOrderTableViewCell: UITableViewCell {
 
     
     func setCell(selectOrderCellData: SelectOrderCellData){
-        itemNameLabel.text = selectOrderCellData.item_name
-        itemCountLabel.text =
-            selectOrderCellData.item_count
+        itemNameLabel.text  = selectOrderCellData.item_name
+        itemCountLabel.text = selectOrderCellData.item_count
     }
 
 }

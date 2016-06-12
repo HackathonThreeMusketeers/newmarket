@@ -14,7 +14,6 @@ class SelectedChildTableViewCell: UITableViewCell {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var name: UILabel!
     
-    
     func setCell(selectChildCellData: SelectChildCellData){
         date.text = selectChildCellData.item_name
         name.text = selectChildCellData.item_date
