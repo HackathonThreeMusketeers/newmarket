@@ -77,10 +77,13 @@ class Request: NSObject {
                     return
                 }
                 let json = JSON(object)
-                
                 var date = NSMutableArray()
                 var name = NSMutableArray()
-                
+                json["data"].forEach{ (_, json) in
+                    date.addObject(json["date"].stringValue)
+                    name.addObject(json["name"].stringValue)
+                    print("name:\(json["name"].stringValue)")
+                }
                 callBackClosure(date: date,name: name)
         }
     }

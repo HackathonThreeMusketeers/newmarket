@@ -38,6 +38,9 @@
 		2C4E2E271D0C1049009F069D /* next2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E2E1E1D0C1049009F069D /* next2.png */; };
 		327601227B38170DC7B4C789 /* Pods_newmarketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7542114D31B79C40A5DDEF2 /* Pods_newmarketTests.framework */; };
 		599778C480A7958F6A160B9C /* Pods_newmarketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DF81B3BC17CCD3F5A10AF4 /* Pods_newmarketUITests.framework */; };
+		CB8D247B1D0CFD9C008057A7 /* SelectedChildTablViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8D247A1D0CFD9C008057A7 /* SelectedChildTablViewCell.swift */; };
+		CBFE50FD1D0CEF6F006DCFF9 /* SelectChildCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE50FC1D0CEF6F006DCFF9 /* SelectChildCellData.swift */; };
+		CBFE50FF1D0CF01C006DCFF9 /* SelectChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE50FE1D0CF01C006DCFF9 /* SelectChildTableViewCell.swift */; };
 		E1FA1ABEE52A58A53780429D /* Pods_newmarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA0A8DE099E5044C7AD2DF3 /* Pods_newmarket.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +105,9 @@
 		B5505426942D215C3411FA39 /* Pods-newmarketUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newmarketUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-newmarketUITests/Pods-newmarketUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7542114D31B79C40A5DDEF2 /* Pods_newmarketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newmarketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C181A29B1E102A2A651AD151 /* Pods-newmarketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newmarketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-newmarketTests/Pods-newmarketTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB8D247A1D0CFD9C008057A7 /* SelectedChildTablViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedChildTablViewCell.swift; sourceTree = "<group>"; };
+		CBFE50FC1D0CEF6F006DCFF9 /* SelectChildCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectChildCellData.swift; sourceTree = "<group>"; };
+		CBFE50FE1D0CF01C006DCFF9 /* SelectChildTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectChildTableViewCell.swift; sourceTree = "<group>"; };
 		F5DF81B3BC17CCD3F5A10AF4 /* Pods_newmarketUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newmarketUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -184,6 +190,9 @@
 				0DEE05BD1D0C6EEA00A646B1 /* SelectOrderCellData.swift */,
 				0DEE05BF1D0C6F7200A646B1 /* SelectOrderTableViewCell.swift */,
 				0DEE05D71D0C90FD00A646B1 /* SelectedOrderTableViewCell.swift */,
+				CBFE50FC1D0CEF6F006DCFF9 /* SelectChildCellData.swift */,
+				CB8D247A1D0CFD9C008057A7 /* SelectedChildTablViewCell.swift */,
+				CBFE50FE1D0CF01C006DCFF9 /* SelectChildTableViewCell.swift */,
 			);
 			path = newmarket;
 			sourceTree = "<group>";
@@ -315,7 +324,7 @@
 				TargetAttributes = {
 					2C4E2DE21D0BA2ED009F069D = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = H543XE4ASB;
+						DevelopmentTeam = 22786B3A7R;
 					};
 					2C4E2DF61D0BA2ED009F069D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -516,14 +525,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D48ADC01D0C1DF200634955 /* OrderConfirmViewController.swift in Sources */,
+				CBFE50FD1D0CEF6F006DCFF9 /* SelectChildCellData.swift in Sources */,
 				0DEE05BA1D0C251D00A646B1 /* Request.swift in Sources */,
 				0DEE05C01D0C6F7200A646B1 /* SelectOrderTableViewCell.swift in Sources */,
+				CBFE50FF1D0CF01C006DCFF9 /* SelectChildTableViewCell.swift in Sources */,
 				0DEE05D81D0C90FD00A646B1 /* SelectedOrderTableViewCell.swift in Sources */,
 				0D48ADBE1D0C1DAF00634955 /* OrderListViewController.swift in Sources */,
 				2C4E2DE91D0BA2ED009F069D /* MainViewController.swift in Sources */,
 				0D48ADC21D0C1E2800634955 /* ChildStateViewController.swift in Sources */,
 				0DEE05BC1D0C490800A646B1 /* SwiftyJSON.swift in Sources */,
 				0D48ADBA1D0C1D2100634955 /* UUIDResisterViewController.swift in Sources */,
+				CB8D247B1D0CFD9C008057A7 /* SelectedChildTablViewCell.swift in Sources */,
 				0DEE05BE1D0C6EEA00A646B1 /* SelectOrderCellData.swift in Sources */,
 				2C4E2DE71D0BA2ED009F069D /* AppDelegate.swift in Sources */,
 			);
@@ -674,7 +686,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = newmarket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Les-Trois-Mousquetaires-de-HACKSONS.newmarket";
+				PRODUCT_BUNDLE_IDENTIFIER = "Trois-Mousquetaires-de-HACKSONS.newmarket";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -689,7 +701,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = newmarket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Les-Trois-Mousquetaires-de-HACKSONS.newmarket";
+				PRODUCT_BUNDLE_IDENTIFIER = "Trois-Mousquetaires-de-HACKSONS.newmarket";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

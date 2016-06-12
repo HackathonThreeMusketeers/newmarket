@@ -13,6 +13,9 @@ class ChildStateViewController: UIViewController {
     @IBOutlet weak var childStateTableView: UITableView!
     let request = Request()
     var timer: NSTimer!
+    var items_id: NSMutableArray = NSMutableArray()
+    var items_name: NSMutableArray = NSMutableArray()
+    var items_date: NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +40,27 @@ class ChildStateViewController: UIViewController {
     
     func setStates(date:NSMutableArray,name:NSMutableArray){
         
-        
+        //print("data:\(data),name:\(name)")
         childStateTableView.reloadData()
+    }
+    
+    
+    //Table Viewのセルの数を指定
+    func tableView(table: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items_id.count
+    }
+    
+    //各セルの要素を設定する
+    func tableView(table: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // tableCell の ID で UITableViewCell のインスタンスを生成
+        let cell:SelectedChildTableViewCell = table.dequeueReusableCellWithIdentifier("SelectedTableCell", forIndexPath: indexPath) as! SelectedChildTableViewCell
+        
+        let selectChildCellData = SelectChildCellData(item_name: items_name[indexPath.row] as! String, item_date: items_date[indexPath.row] as! String)
+        
+        cell.setCell(selectChildCellData)
+        
+        return cell
     }
     
     //func
